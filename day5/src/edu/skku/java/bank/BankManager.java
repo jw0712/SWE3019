@@ -40,4 +40,14 @@ public class BankManager {
 			sum+=as[i].getBalance();
 		}return sum;
 	}
+	
+	public void deposit(String num, int money) {
+		Account a = search(num);
+		if (a==null) {
+			System.out.println("계좌번호가 존재하지 않음");
+			return; //이제 꺼져 !! Bye
+		}
+		a.deposit(money); //Account의 입금		
+	}
+	
 }

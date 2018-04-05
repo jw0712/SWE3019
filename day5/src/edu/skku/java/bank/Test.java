@@ -14,6 +14,8 @@ public class Test {
 		System.out.println("======search Minus=======");
 		mgr.searchMinus();
 		System.out.println("전체 금액: "+mgr.getTotal());
+		mgr.deposit("11-111", 5000); //입금
+		System.out.println("11-111 검색: "+mgr.search("11-111"));
 
 	}
 
