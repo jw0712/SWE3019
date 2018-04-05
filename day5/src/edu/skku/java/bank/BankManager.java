@@ -7,37 +7,37 @@ public class BankManager {
 	
 	
 	public void add(Account a) {
-		as[index]=a;
-		index++;
+		as[index++]=a;
+		//as[index]=a;
+		//index++;
 	}
 	//전체 출력
 	public void search() {
-		for(Account a:as) {
-			System.out.println(a);
+		for(int i=0;i<index;i++) {
+			System.out.println(as[i]);//as[i].toString();
 		}
 	}
+	//전체 출력
 	//이름이 같고 파라메터만 다르면 overloading (리턴타입 상관없음)
 	public Account search(String num) {
-		Account b = new Account();
-		for(Account a:as) {
-			if (a.getNum().equals(num)){
-				return a;
-			}
-		}return b;
+		for(int i=0;i<index;i++) {
+			//if(as[i].getNum().equals(num))
+			if(num.equals(as[i].getNum())) 	return as[i];
+		}return null;
 	}
 	
 	public void searchMinus() {
-		for(Account a:as) {
-			if(a instanceof Minus) {
-				System.out.println(a);
+		for(int i=0;i<index;i++) {
+			if(as[i] instanceof Minus) {
+				System.out.println(as[i]);
 			}
 		}
 	}
 	
 	public int getTotal() {
 		int sum = 0;
-		for(Account a:as) {
-			sum+=a.getBalance();
+		for(int i=0;i<index;i++) {
+			sum+=as[i].getBalance();
 		}return sum;
 	}
 }

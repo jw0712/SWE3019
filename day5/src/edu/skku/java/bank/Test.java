@@ -8,8 +8,10 @@ public class Test {
 		mgr.add(new Minus("56-1233",2222,50000,100000));
 		mgr.add(new Account("33-111",3333,10000));
 		mgr.add(new Minus("12-3456",4444,150000,500000));
+		System.out.println("======search=======");
 		mgr.search();
 		System.out.println("11-111 검색: "+mgr.search("11-111"));
+		System.out.println("======search Minus=======");
 		mgr.searchMinus();
 		System.out.println("전체 금액: "+mgr.getTotal());
 
