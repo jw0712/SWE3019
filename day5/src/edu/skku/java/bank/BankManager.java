@@ -20,7 +20,7 @@ public class BankManager {
 	public Account search(String num) {
 		Account b = new Account();
 		for(Account a:as) {
-			if (a.getNum().equals(num){
+			if (a.getNum().equals(num)){
 				return a;
 			}
 		}return b;
