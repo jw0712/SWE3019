@@ -28,14 +28,23 @@ public class EmpTest {
 	Employee e1=mgr.search(1234);
 	System.out.println(e1);
 	System.out.println(e1.getName()+ "의 월급여 : "+ e1.getSalary());
-	/*
+	
 	System.out.println("\n******* 검색: 하나");
 	Employee[] search = mgr.search("하나");
 	for(Employee e:search) {
 		System.out.println(e);
 		System.out.println(e.getName()+"의 월급여 : "+e.getSalary());
+		}
+	
+	/*
+	System.out.println("\n******* 검색: 지원");
+	Employee[] search1 = mgr.search("지원");
+	for(Employee e:search1) {
+		System.out.println(e);
+		System.out.println(e.getName()+"의 월급여 : "+e.getSalary());
+		}*/
 	}
-	*/
-	}
-
 }
+
+
+

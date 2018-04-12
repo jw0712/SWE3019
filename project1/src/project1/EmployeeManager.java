@@ -39,11 +39,11 @@ public class EmployeeManager {
 		return index;
 	}
 	
-	//저장된 정규 직원들의 총 급여액을 구하여 반환하는 기능 (총 급여액 = 각 직원에게 지급해야 하는 월 급여액의 총합)
+	//저장된 정규 직원들의 총 급여액을 구하여 반환하는 기능
 	public int getTotalSalary() {
 		int total=0;
 		for(int i=0;i<index;i++) {
-			total = total+eList[i].getSalary()*12; 
+			total = total+eList[i].getSalary(); 
 		}return total;
 	}
 	
@@ -55,10 +55,29 @@ public class EmployeeManager {
 	}
 	
 	//검색어로 지정된 사원 이름을 포함하는 모든 직원을 검색하는 기능
-	public Employee search(String name) {
+	public Employee[] search (String name) {
+		Employee[] result = new Employee[getCount(name)];
+		int num1=0; //result's index
 		for(int i=0;i<index;i++) {
-			if(name.contains(eList[i].getName())) 	return eList[i];
-		}return null;
+			if(eList[i].getName().contains(name)) {
+				result[num1]=eList[i];
+				num1++;
+		}
+		}return result;
 	}
+	
+	
+	//---------------요구사항 아님-----------------
+	//검색어로 지정된 사원 이름을 포함하는 모든 직원의 수 
+	public int getCount(String name) {
+		int num = 0;
+		for(int i=0;i<index;i++) {
+			if(eList[i].getName().contains(name)) {
+				num +=1;
+			}
+		}
+	return num;
+	}//day5.CarManager
+	
 	
 }
