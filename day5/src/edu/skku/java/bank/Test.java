@@ -16,7 +16,14 @@ public class Test {
 		System.out.println("전체 금액: "+mgr.getTotal());
 		mgr.deposit("11-111", 5000); //입금
 		System.out.println("11-111 검색: "+mgr.search("11-111"));
-
+		System.out.println("======출금확인=======");
+		mgr.withdraw("11-111", 1111, 500000);
+		System.out.println("11-111 검색: "+mgr.search("11-111"));
+		System.out.println("======계좌이체=======");
+		System.out.println("33-111 검색: "+mgr.search("33-111"));
+		mgr.trans("11-111", 1111, 50000, "33-111");
+		System.out.println("11-111 검색: "+mgr.search("11-111"));
+		System.out.println("33-111 검색: "+mgr.search("33-111"));
 	}
 
 }

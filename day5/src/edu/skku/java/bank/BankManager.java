@@ -50,4 +50,32 @@ public class BankManager {
 		a.deposit(money); //Account의 입금		
 	}
 	
+	public void withdraw(String num, int password, int money) {
+		Account a = search(num);
+		if(a!=null) {
+			a.withdraw(password, money);
+			
+		}else {
+			System.out.println("계좌번호가 존재하지 않습니다.");
+		}
+	}
+	/*
+	public void trans(String num, int password, int money, String tnum) {
+		Account a = search(num);
+		Account b = search(tnum);
+		if(a!=null && b!=null) {
+			a.withdraw(password, money);
+			b.deposit(money);
+		}else {
+			System.out.println("계좌번호가 존재하지 않습니다.");
+		}
+		
+	}*/
+	
+	public void trans(String num, int password, int money, String tnum) {
+		withdraw(num, password, money);
+		deposit(tnum, money); 
+		//교수님 코드. 좋은 코드는 아님 (예외 처리가 안되기 때문)
+	}
 }
+
