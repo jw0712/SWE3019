@@ -1,10 +1,12 @@
 package project1;
 
 public abstract class Employee {
+	
 	private int num; //직원번호
 	private String name; //이름
 	private int salary;
 	
+	//생성자
 	public Employee() {
 		super();
 	}
@@ -16,8 +18,7 @@ public abstract class Employee {
 		this.salary = salary;
 	}
 
-
-
+	//Getters and Setters
 	public int getNum() {
 		return num;
 	}
@@ -33,18 +34,23 @@ public abstract class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public abstract int getSalary();
 	
+
 	public void setSalary(int salary) {
-		this.salary=salary;
+		this.salary = salary;
 	}
 
+	//toString()
 	@Override
 	public String toString() {
-		return "Employee [num=" + num + ", name=" + name + "]";
+		return "empNo=" + num + ", name=" + name;
 	}
-	
+
+
+
+
 	
 	
 }
