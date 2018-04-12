@@ -3,6 +3,7 @@ package project1;
 public class EmpTest {
 
 	public static void main(String[] args) {
+	System.out.println("경영학과 2015311016 최지원");
 	EmployeeManager mgr = new EmployeeManager();
 	mgr.add(new FullTimeEmployee(1234,"김하나",55000000));
 	mgr.add(new FullTimeEmployee(1235,"김둘리",32300000));
