@@ -23,6 +23,9 @@ public class Test {
 		//클래스를 메모리에 로딩해주는 메서드인 forname이 있는 Class라는 클래스
 		Class.forName("test.Abc");
 		
+		//반올림
+		System.out.println(Math.round(34.56));
+		
 
 	}
 
