@@ -26,6 +26,7 @@ public class Test {
 		//반올림
 		System.out.println(Math.round(34.56));
 		
+		//Math클래스 코드 보고 싶으면, Math위에 커서 -> F3--> Attach.. --> jdk 안에 src.zip 하면 코드 보임
 
 	}
 
