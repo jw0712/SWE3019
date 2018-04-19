@@ -1,6 +1,6 @@
 package edu.skku.java.inter;
-//»ó¼ö¿Í ¸ğµÎ ±¸ÇöµÇÁö ¾ÊÀº ¸Ş¼­µå:interface
-//¸®¸ğÄÜ! ÀÌ·±°Ô ÀÖ´Ù´Â °ÍÀ» ¾Ë·ÁÁÙ ¸ñÀû
+//ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ş¼ï¿½ï¿½ï¿½:interface
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½! ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½Ö´Ù´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 public interface Car {
 	final int COUNT = 100; //public static final 
@@ -8,7 +8,7 @@ public interface Car {
 	
 	public abstract void start();
 	void stop(); //public abstract
-	//***ÀÌ ¸Ş¼­µå¸¦ overriding ½Ã¿¡´Â public void stop() {code};***
+	//***ìƒì† & overriding í•  ë•Œ public void stop() {code};***
 	
 
 }
