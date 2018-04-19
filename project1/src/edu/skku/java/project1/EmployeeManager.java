@@ -1,4 +1,4 @@
-package project1;
+package edu.skku.java.project1;
 
 public class EmployeeManager {
 	Employee[] eList=new Employee[50];

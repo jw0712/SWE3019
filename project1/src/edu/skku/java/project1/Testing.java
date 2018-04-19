@@ -1,4 +1,4 @@
-package project1;
+package edu.skku.java.project1;
 
 public class Testing {
 //개인적으로 테스트, 제출용 아님.
