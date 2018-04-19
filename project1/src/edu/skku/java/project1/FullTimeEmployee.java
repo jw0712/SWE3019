@@ -3,7 +3,7 @@ package edu.skku.java.project1;
 public class FullTimeEmployee extends Employee {
 	private int annualSalary;
 
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public FullTimeEmployee() {
 		super();
 	}
@@ -15,7 +15,7 @@ public class FullTimeEmployee extends Employee {
 	}
 
 
-	//¿ù±Ş¿© °è»ê ±â´É
+	//ì›”ê¸‰ì—¬ ê³„ì‚° ê¸°ëŠ¥
 	@Override
 	public int getSalary() {
 		return this.annualSalary/12;

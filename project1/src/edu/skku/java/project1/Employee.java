@@ -2,11 +2,11 @@ package edu.skku.java.project1;
 
 public abstract class Employee {
 	
-	private int num; //Á÷¿ø¹øÈ£
-	private String name; //ÀÌ¸§
+	private int num; //ì§ì› ë²ˆí˜¸
+	private String name; //ï¿½ì´ë¦„
 	private int salary;
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public Employee() {
 		super();
 	}

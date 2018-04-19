@@ -1,22 +1,23 @@
 package edu.skku.java.project1;
 
 public class EmployeeManager {
+	//ì§ì› ì •ë³´ë¥¼ ì €ì¥í•˜ê¸° ìœ„í•œ ë°°ì—´ ì„ ì–¸ê³¼ ìƒì„±
 	Employee[] eList=new Employee[50];
 	int index=0;
 	
-	//Á÷¿ø ÀúÀåÇÏ±â À§ÇÑ ±â´É ±¸Çö
+	//ì§ì›ì„ ì €ì¥í•˜ê¸° ìœ„í•œ ê¸°ëŠ¥ êµ¬í˜„ â€“ add
 	public void add(Employee e) {
 		eList[index++]=e;
 	}
 	
-	//ÀúÀåµÈ ¸ğµç Á÷¿ø Á¤º¸¸¦ Ãâ·ÂÇÏ´Â ±â´É ±¸Çö
+	//ì €ì¥ëœ ëª¨ë“  ì§ì› ì •ë³´ë¥¼ ì¶œë ¥í•˜ëŠ” ê¸°ëŠ¥ êµ¬í˜„ â€“ allList
 	public void allList() {
 		for(int i=0;i<index;i++) {
 			System.out.println(eList[i]);
 		}
 	}
 	
-	//ÆÄÆ®Å¸ÀÓ Á÷¿ø¸¸ Ãâ·ÂÇÏ´Â ±â´É
+	//íŒŒíŠ¸íƒ€ì„ì§ì›ë§Œ ì¶œë ¥í•˜ëŠ” ê¸°ëŠ¥ â€“ partTimeEmpList
 	public void partTimeEmpList() {
 		for(int i=0;i<index;i++) {
 			if(eList[i] instanceof PartTimeEmployee) {
@@ -25,7 +26,7 @@ public class EmployeeManager {
 		}
 	}
 	
-	//Á¤±ÔÁ÷¿ø¸¸ Ãâ·ÂÇÏ´Â ±â´É 
+	//ì •ê·œì§ì›ë§Œ ì¶œë ¥í•˜ëŠ” ê¸°ëŠ¥ - fullTimeEmpList
 	public void fullTimeEmpList() {
 		for(int i=0;i<index;i++) {
 			if(eList[i] instanceof FullTimeEmployee) {
@@ -34,12 +35,12 @@ public class EmployeeManager {
 		}
 	}
 	
-	//ÀúÀåµÈ Á÷¿ø ¼ö¸¦ ¸®ÅÏÇÏ´Â ±â´É
+	//ì €ì¥ëœ ì§ì› ìˆ˜ë¥¼ ë¦¬í„´í•˜ëŠ” ê¸°ëŠ¥ â€“ size
 	public int size() {
 		return index;
 	}
 	
-	//ÀúÀåµÈ Á¤±Ô Á÷¿øµéÀÇ ÃÑ ±Ş¿©¾×À» ±¸ÇÏ¿© ¹İÈ¯ÇÏ´Â ±â´É
+	//ì €ì¥ëœ ì •ê·œ ì§ì›ë“¤ì˜ ì´ ê¸‰ì—¬ì•¡ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•˜ëŠ” ê¸°ëŠ¥ â€“ getTotalSalary
 	public int getTotalSalary() {
 		int total=0;
 		for(int i=0;i<index;i++) {
@@ -47,28 +48,30 @@ public class EmployeeManager {
 		}return total;
 	}
 	
-	//»ç¿ø ¹øÈ£·Î Æ¯Á¤ Á÷¿øÀ» °Ë»öÇÏ´Â ±â´É
+	//ì‚¬ì› ë²ˆí˜¸ë¡œ íŠ¹ì • ì§ì› ì„ ê²€ìƒ‰í•˜ëŠ” ê¸°ëŠ¥ â€“ search
 	public Employee search(int num) {
 		for(int i=0;i<index;i++) {
 			if(num==(eList[i].getNum())) 	return eList[i];
 		}return null;
 	}
 	
-	//°Ë»ö¾î·Î ÁöÁ¤µÈ »ç¿ø ÀÌ¸§À» Æ÷ÇÔÇÏ´Â ¸ğµç Á÷¿øÀ» °Ë»öÇÏ´Â ±â´É
+	//ê²€ìƒ‰ì–´ë¡œ  ì§€ì •ëœ ì‚¬ì› ì´ë¦„ì„ í¬í•¨í•˜ëŠ” ëª¨ë“  ì§ì›ì„ ê²€ìƒ‰í•˜ëŠ” ê¸°ëŠ¥ â€“ search
 	public Employee[] search (String name) {
 		Employee[] result = new Employee[getCount(name)];
-		int num1=0; //result's index
-		for(int i=0;i<index;i++) {
-			if(eList[i].getName().contains(name)) {
-				result[num1]=eList[i];
-				num1++;
+		if(getCount(name)==0) {
+			System.out.println("í•´ë‹¹ ì‚¬ì›ì´ ì—†ìŠµë‹ˆë‹¤.");
+		}else {
+			int num1=0; //result's index
+			for(int i=0;i<index;i++) {
+				if(eList[i].getName().contains(name)) {
+					result[num1]=eList[i];
+					num1++;}
 		}
 		}return result;
 	}
 	
 	
-	//---------------¿ä±¸»çÇ× ¾Æ´Ô-----------------
-	//°Ë»ö¾î·Î ÁöÁ¤µÈ »ç¿ø ÀÌ¸§À» Æ÷ÇÔÇÏ´Â ¸ğµç Á÷¿øÀÇ ¼ö 
+
 	public int getCount(String name) {
 		int num = 0;
 		for(int i=0;i<index;i++) {

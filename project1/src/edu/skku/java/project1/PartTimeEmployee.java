@@ -2,12 +2,11 @@ package edu.skku.java.project1;
 
 public class PartTimeEmployee extends Employee {
 
-	private int hourlySalary; //½Ã°£´ç ±Ş¿©
+	private int hourlySalary; //ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Ş¿ï¿½
 	
-	//»ı¼ºÀÚ
+	//ìƒì„±ì
 	public PartTimeEmployee() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public PartTimeEmployee(int num, String name, int hourlySalary) {
@@ -16,7 +15,7 @@ public class PartTimeEmployee extends Employee {
 		this.hourlySalary=hourlySalary;
 		}
 	
-	//¿ù ±Ş¿© = ½Ã°£´ç ±Ş¿© * 160
+	//ì›”ê¸‰ì—¬ ê³„ì‚° ê¸°ëŠ¥
 	@Override
 	public int getSalary() {
 		return hourlySalary*160;

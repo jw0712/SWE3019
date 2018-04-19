@@ -3,49 +3,53 @@ package edu.skku.java.project1;
 public class EmpTest {
 
 	public static void main(String[] args) {
-	System.out.println("°æ¿µÇĞ°ú 2015311016 ÃÖÁö¿ø");
+	System.out.println("ê²½ì˜í•™ê³¼ 2015311016 ìµœì§€ì›");
 	EmployeeManager mgr = new EmployeeManager();
-	mgr.add(new FullTimeEmployee(1234,"±èÇÏ³ª",55000000));
-	mgr.add(new FullTimeEmployee(1235,"±èµÑ¸®",32300000));
-	mgr.add(new PartTimeEmployee(12341,"È«±æµ¿",20000));
-	mgr.add(new FullTimeEmployee(1236,"Àå±æ»ê",42500000));
-	mgr.add(new PartTimeEmployee(12342,"ÀÏÁö¸Å",60000));
-	mgr.add(new PartTimeEmployee(12343,"ÀÓ²©Á¤",110000));
-	mgr.add(new FullTimeEmployee(1237,"ÀÌÇÏ³ª",120000000));
-	//mgr.add(new FullTimeEmployee(1238,"ÃÖÁö¿ø",50000000));
+	mgr.add(new FullTimeEmployee(1234,"ê¹€í•˜ë‚˜",55000000));
+	mgr.add(new FullTimeEmployee(1235,"ê¹€ë‘˜ë¦¬",32300000));
+	mgr.add(new PartTimeEmployee(12341,"í™ê¸¸ë™",20000));
+	mgr.add(new FullTimeEmployee(1236,"ì¥ê¸¸ì‚°",42500000));
+	mgr.add(new PartTimeEmployee(12342,"ì¼ì§€ë§¤",60000));
+	mgr.add(new PartTimeEmployee(12343,"ì„êº½ì •",110000));
+	mgr.add(new FullTimeEmployee(1237,"ì´í•˜ë‚˜",120000000));
+	//mgr.add(new FullTimeEmployee(1238,"ìµœì§€ì›",50000000));
 
 	mgr.allList();
-	System.out.println("ÀüÃ¼ Á÷¿ø¼ö: "+ mgr.size()+"¸í");
+	System.out.println("ì „ì²´ ì§ì›ìˆ˜: "+ mgr.size()+"ëª…");
 	
-	System.out.println("ÀüÁ÷¿ø ÃÑ ±Ş¿©¾×: "+ mgr.getTotalSalary());
+	System.out.println("ì „ì§ì› ì´ ê¸‰ì—¬ì•¡: "+ mgr.getTotalSalary());
 	
-	System.out.println("\n******* Á¤±ÔÁ÷ ¸ñ·Ï");
+	System.out.println("\n******* ì •ê·œì§ ëª©ë¡");
 	mgr.fullTimeEmpList();
 	
-	System.out.println("\n******* ÆÄÆ®Å¸ÀÓÁ÷ ¸ñ·Ï");
+	System.out.println("\n******* íŒŒíŠ¸íƒ€ì„ì§ ëª©ë¡");
 	mgr.partTimeEmpList();
 	
-	System.out.println("\n******* °Ë»ö: 1234");
+	System.out.println("\n******* ê²€ìƒ‰: 1234");
 	Employee e1=mgr.search(1234);
 	System.out.println(e1);
-	System.out.println(e1.getName()+ "ÀÇ ¿ù±Ş¿© : "+ e1.getSalary());
+	System.out.println(e1.getName()+ "ì˜ ì›”ê¸‰ì—¬ : "+ e1.getSalary());
 	
-	System.out.println("\n******* °Ë»ö: ÇÏ³ª");
-	Employee[] search = mgr.search("ÇÏ³ª");
+	System.out.println("\n******* ê²€ìƒ‰: í•˜ë‚˜");
+	Employee[] search = mgr.search("í•˜ë‚˜");
 	for(Employee e:search) {
 		System.out.println(e);
-		System.out.println(e.getName()+"ÀÇ ¿ù±Ş¿© : "+e.getSalary());
+		System.out.println(e.getName()+"ì˜ ì›”ê¸‰ì—¬ : "+e.getSalary());
+		}
+	
+	System.out.println("\n******* ê²€ìƒ‰: íƒœí¬");
+	Employee[] search1 = mgr.search("íƒœí¬");
+	for(Employee e:search1) {
+		System.out.println(e);
+		System.out.println(e.getName()+"ì˜ ì›”ê¸‰ì—¬ : "+e.getSalary());
 		}
 	
 	/*
-	System.out.println("\n******* °Ë»ö: Áö¿ø");
-	Employee[] search1 = mgr.search("Áö¿ø");
+	System.out.println("\n******* ê²€ìƒ‰: ì§€ì›");
+	Employee[] search1 = mgr.search("ì§€ì›");
 	for(Employee e:search1) {
 		System.out.println(e);
-		System.out.println(e.getName()+"ÀÇ ¿ù±Ş¿© : "+e.getSalary());
+		System.out.println(e.getName()+"ì˜ ì›”ê¸‰ì—¬ : "+e.getSalary());
 		}*/
 	}
 }
-
-
-
