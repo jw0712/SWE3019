@@ -1,45 +1,45 @@
 package edu.skku.java.bank;
-//ÀÏ¹İ ÅëÀå
+//ï¿½Ï¹ï¿½ ï¿½ï¿½ï¿½ï¿½
 public class Account {
-	private String num;//°èÁÂ¹øÈ£
-	private int password;//ºñ¹Ğ¹øÈ£
-	private long balance;//ÀÜ¾×
+	private String num;//ï¿½ï¿½ï¿½Â¹ï¿½È£
+	private int password;//ï¿½ï¿½Ğ¹ï¿½È£
+	private long balance;//ï¿½Ü¾ï¿½
 	
 	
-	//»ı¼ºÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Account() {
 		super();
 	}
 	
 	public Account(String num, int password, long balance) {
 		//super();
-		//set ¸Ş¼­µå¸¦ ÀÌ¿ëÇØ¼­ ±Ô°İ¿¡ ¸ÂÃç¼­ µé¾î¿Ô´ÂÁö Ã¼Å©ÇÏ¸é °ß°íÇÑ ÄÚµå.
+		//set ï¿½Ş¼ï¿½ï¿½å¸¦ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½Ô°İ¿ï¿½ ï¿½ï¿½ï¿½ç¼­ ï¿½ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ Ã¼Å©ï¿½Ï¸ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½Úµï¿½.
 		setNum(num);
 		setPassword(password);
 		setBalance(balance);
 	}
 
 	
-	//ÀÔ±İ
+	//ï¿½Ô±ï¿½
 	public void deposit(int money) {
 		balance += money;
 	}
 	//password check
 	public boolean checkPassword(int password) {
-		//return this.password.equals(password); //password°¡ ¹®ÀÚ¿­ÀÏ ¶§
+		//return this.password.equals(password); //passwordï¿½ï¿½ ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½
 		return this.password==password;
 	}
-	//Ãâ±İ
+	//ï¿½ï¿½ï¿½
 	public void withdraw(int password, int money) {
-		//1)ºñ¹Ğ¹øÈ£ È®ÀÎ -> 2) ÀÜ¾× Ã¼Å©(ÀÜ¾× ÀÌ»ó Ãâ±İ ºÒ°¡)
+		//1)ï¿½ï¿½Ğ¹ï¿½È£ È®ï¿½ï¿½ -> 2) ï¿½Ü¾ï¿½ Ã¼Å©(ï¿½Ü¾ï¿½ ï¿½Ì»ï¿½ ï¿½ï¿½ï¿½ ï¿½Ò°ï¿½)
 		if (checkPassword(password) && balance>=money) {
 			balance-=money; //balance=balance-money;
-			System.out.println("Á¤»ó Ãâ±İ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 		}else {
-			System.out.println("ºñ¹Ğ¹øÈ£ ¶Ç´Â ÀÜ¾× ºÎÁ·");
+			System.out.println("ï¿½ï¿½Ğ¹ï¿½È£ ï¿½Ç´ï¿½ ï¿½Ü¾ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}
 	}
-	//¸¶¿ì½º ¿À¸¥ÂÊ->Source->Setters and Getters
+	//ï¿½ï¿½ï¿½ì½º ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½->Source->Setters and Getters
 	//Setters&Getters
 	public String getNum() {
 		return num;
@@ -60,9 +60,16 @@ public class Account {
 		this.balance = balance;
 	}
 	@Override
-	public String toString() {
-		return "Account [num=" + num + ", balance=" + balance + "]";
+	public String toString() { //CharSequenceë¡œ ë¦¬í„´í•˜ëŠ” ê²Œ ë” ì¢‹ë‹¤.
+		StringBuilder builder = new StringBuilder();
+		builder.append("Account [num=");
+		builder.append(num);
+		builder.append(", password=");
+		builder.append(password);
+		builder.append(", balance=");
+		builder.append(balance);
+		builder.append("]");
+		return builder.toString();
 	}
-	
-	
 }
+
