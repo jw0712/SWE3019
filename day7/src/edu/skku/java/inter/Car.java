@@ -1,6 +1,6 @@
 package edu.skku.java.inter;
-//����� ��� �������� ���� �޼���:interface
-//������! �̷��� �ִٴ� ���� �˷��� ����
+//상수와 모두 구현되지 않은 메서드:interface
+//리모콘! 이런게 있다는 것을 알려줄 목적
 
 public interface Car {
 	final int COUNT = 100; //public static final 
@@ -8,7 +8,7 @@ public interface Car {
 	
 	public abstract void start();
 	void stop(); //public abstract
-	//***상속 & overriding 할 때 public void stop() {code};***
+	//***이 메서드를 overriding 시에는 public void stop() {code};***
 	
 
 }

@@ -4,7 +4,7 @@ public class Bus extends Car {
 
 	@Override
 	void start() {
-		System.out.println("¹ö½º Ãâ¹ß");
+		System.out.println("ë²„ìŠ¤ ì¶œë°œ");
 	}
 
 }
