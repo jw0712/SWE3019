@@ -17,8 +17,6 @@ public class Test {
 		mgr.update("11차1111", 10000);
 		mgr.delete("44버4444");
 
-		
-		
 		List<Car> cars=mgr.search();
 		for(Car c:cars) {
 			System.out.println(c);
