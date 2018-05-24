@@ -22,14 +22,13 @@ public class EventTest4 {
 		f.addWindowListener(new MyHandler3());
 		b=new Button("버튼을 클릭해 주세요");
 		
-		//미완성이라 new가 안되니까 만드셈!
-		ActionListener h = new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				tf.setText("버튼이 클릭되었습니다");
-			}
-		};
 
-		b.addActionListener(h);
+
+		b.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			tf.setText("버튼이 클릭되었습니다");
+			}
+		});
 
 		tf=new TextField();
 		
