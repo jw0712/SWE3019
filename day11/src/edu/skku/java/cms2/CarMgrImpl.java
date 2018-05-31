@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CarMgrImpl implements ICarMgr {
 	List<Car> cars = new ArrayList<>();
-
+//List<Car> cars = new ArrayList<>(100); //몇 개 쓸 지 모르겠지만 대충 100개 쓸 것 같은데
 
 	public void add(Car c) {
 		cars.add(c);
@@ -28,7 +28,7 @@ public class CarMgrImpl implements ICarMgr {
 		Car c = search(num);
 		if(c!=null) {
 			c.setPrice(price);
-		}else{System.out.println("차량 번호 오류");}
+		}else{System.out.println("李⑤웾 踰덊샇 �삤瑜�");}
 
 	}
 
@@ -36,7 +36,7 @@ public class CarMgrImpl implements ICarMgr {
 		Car c = search(num);
 		if(c!=null) {
 			cars.remove(c);
-		}else{System.out.println("오류");}
+		}else{System.out.println("�삤瑜�");}
 
 	}
 
