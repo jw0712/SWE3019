@@ -20,7 +20,7 @@ public class EventTest1 {
 	public void createGUI() {
 		f=new Frame("Event Test");
 		f.addWindowListener(new MyHandler3());
-		b=new Button("ë²„íŠ¼ì„ í´ë¦­í•´ ì£¼ì„¸ìš”");
+		b=new Button("¹öÆ°À» ´­·¯ÁÖ¼¼¿ä");
 		b.addActionListener(new MyHandler());
 
 		tf=new TextField();
@@ -41,14 +41,14 @@ public class EventTest1 {
 	
 	class MyHandler implements ActionListener{
 		public void actionPerformed(ActionEvent e) {
-			tf.setText("ë²„íŠ¼ì´ í´ë¦­ë˜ì—ˆìŠµë‹ˆë‹¤");
+			tf.setText("¹öÆ°ÀÌ ´­·È½À´Ï´Ù");
 		}	
-	}//ActionListener: Click, Enter Keyì— ë°˜ì‘
+	}//ActionListener: Click, Enter Key¿¡ ¹İÀÀ
 	
 	class MyHandler3 implements WindowListener{
 		public void windowOpened(WindowEvent e) {}
 		public void windowClosing(WindowEvent e) {
-			System.exit(0); //ì •ìƒì ìœ¼ë¡œ ì‹œìŠ¤í…œ ì¢…ë£Œ
+			System.exit(0); //Á¤»óÀû Á¾·á
 			}
 		public void windowClosed(WindowEvent e) {}
 		public void windowIconified(WindowEvent e) {}

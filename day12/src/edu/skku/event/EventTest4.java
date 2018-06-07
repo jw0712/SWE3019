@@ -5,6 +5,7 @@ import java.awt.Frame;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -19,7 +20,11 @@ public class EventTest4 {
 	
 	public void createGUI() {
 		f=new Frame("Event Test");
-		f.addWindowListener(new MyHandler3());
+		f.addWindowListener(new WindowAdapter() {
+			public void windowClosing(WindowEvent e) {
+				System.exit(0); //정상적으로 시스템 종료
+			}
+		});
 		b=new Button("버튼을 클릭해 주세요");
 		
 
@@ -44,21 +49,6 @@ public class EventTest4 {
 	
 	public static void main(String[] args) {
 		new EventTest4();
-	}
-
-	//ActionListener: Click, Enter Key에 반응
-	
-	class MyHandler3 implements WindowListener{
-		public void windowOpened(WindowEvent e) {}
-		public void windowClosing(WindowEvent e) {
-			System.exit(0); //정상적으로 시스템 종료
-			}
-		public void windowClosed(WindowEvent e) {}
-		public void windowIconified(WindowEvent e) {}
-		public void windowDeiconified(WindowEvent e) {}
-		public void windowActivated(WindowEvent e) {}
-		public void windowDeactivated(WindowEvent e) {}
-		
 	}
 
 }
