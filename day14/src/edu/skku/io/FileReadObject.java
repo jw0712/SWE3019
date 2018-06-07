@@ -9,13 +9,20 @@ public class FileReadObject {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		File f = new File("data.ob");
-		if(!(f.exists())) return;
 		FileInputStream fis = new FileInputStream(f);
 		ObjectInputStream ois  = new ObjectInputStream(fis);
 		System.out.println(ois.readObject()); //return:Object type
 		System.out.println(ois.readObject());
 		ois.close();
 		fis.close();
+		
+
+		ObjectInputStream ois2  = new ObjectInputStream(
+								new FileInputStream(
+								new File("data.ob")));
+		System.out.println(ois2.readObject());
+		System.out.println(ois2.readObject());
+		ois2.close();
 		
 		
 
